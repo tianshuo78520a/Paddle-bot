@@ -17,3 +17,4 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./index.html
+        run: pwd && ls
