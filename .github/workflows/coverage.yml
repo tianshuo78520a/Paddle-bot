@@ -16,5 +16,5 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./index.html
+        file: /home/paddle/actions-runner/_work/Paddle-bot/Paddle-bot/index.html
         run: pwd && ls
