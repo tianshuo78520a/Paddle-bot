@@ -3,18 +3,13 @@ name: Coverage
 on:
   push:
     branches: [ "master" ]
-
+ 
 jobs:
   test:
     runs-on: [ CPU ]
     steps:
-    - name: Run tests
-      run: 
-        wget -q https://xly.bce.baidu.com/ipipe/ipipe-report/report/27877949/c++-coverage/tensorrt/index.html && ls
-
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
+      uses: actions/upload-artifact@v2
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: /home/paddle/actions-runner/_work/Paddle-bot/Paddle-bot/index.html
-        run: pwd && ls
+        name: my-artifact
+        path: /home/paddle/actions-runner/_work/Paddle-bot/Paddle-bot/index.html
