@@ -17,4 +17,3 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./index.html
-        run: npm run code-coverage
