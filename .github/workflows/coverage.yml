@@ -9,7 +9,7 @@ jobs:
     runs-on: [ CPU ]
     steps:
     - name: Upload coverage to Codecov
-      uses: actions/upload-artifact@v2
+      uses: codecov/codecov-action@v2
       with:
-        name: my-artifact
-        path: /home/paddle/actions-runner/_work/Paddle-bot/Paddle-bot/coverage.xml
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: /home/paddle/actions-runner/_work/Paddle-bot/Paddle-bot/coverage.xml
